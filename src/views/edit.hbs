@@ -1,0 +1,31 @@
+
+
+
+<br>
+  <div class="row align-items-center">
+    <div class="col">
+    </div>
+    <div class="col">
+      <div class="card">
+  <h5 class="card-header">Editando</h5>
+  <div class="card-body">
+    <form action="/edit/{{task._id}}", method="POST">
+    <input type="text" name="mat" placeholder="Materia" class="form-control" value="{{task.mat}}">
+    <br>
+    <input type="text" name="title" placeholder="Titulo" class="form-control" value="{{task.title}}">
+    <br>
+    <textarea 
+        name="description" 
+        rows="3" 
+        placeholder="Añade una descripcion"
+        class="form-control"
+    >{{task.description}}</textarea>
+    <br>
+    <button class="btn btn-warning">Actualizar</button>
+</form>
+  </div>
+</div>
+    </div>
+    <div class="col">
+    </div>
+  </div>

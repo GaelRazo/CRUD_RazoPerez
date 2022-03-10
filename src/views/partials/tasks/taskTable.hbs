@@ -1,0 +1,44 @@
+
+<table class="table table-striped table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Materia</th>
+            <th>Titulo</th>
+            <th>Descripción</th>
+            <th>Operaciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+  {{#each task}}
+  <tr>
+      <td>{{@index}}</td>
+        <td>
+          {{mat}}
+      </td>
+
+      <td>
+          {{title}}
+      </td>
+      <td>
+          {{description}}
+      </td>
+      <td>
+        
+        {{#if done}}
+
+        <a href="/toggleDone/{{_id}}" class="btn btn-primary">Pendiente</a>
+        {{else}}
+        <a href="/toggleDone/{{_id}} "class="btn btn-success" >Hecho</a>
+        {{/if}}
+        
+        <a href="/delete/{{_id}}" class="btn btn-danger">Borrar</a>
+        <a href="/edit/{{_id}}" class="btn btn-warning">Editar</a>
+      </td>
+  </tr>
+  {{/each}}
+
+    </tbody>
+</table>
